@@ -6,12 +6,13 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 
+load_dotenv() 
+
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-## Langmith tracking
-os.environ["LANGCHAIN_TRACING_V2"]="true"
 LANGCHAIN_API_KEY = os.environ["LANGCHAIN_API_KEY"]
 
-load_dotenv()  #
+# Langchain tracking
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
 
 
 prompt=ChatPromptTemplate.from_messages(
@@ -24,10 +25,10 @@ prompt=ChatPromptTemplate.from_messages(
 ## streamlit framework
 
 st.title('VedDarpan Chatbot')
-input_text=st.text_input("Search the topic u want")
+input_text=st.text_input("Search the topic you want")
 
 # openAI LLm 
-llm=ChatOpenAI(model="llama-3-sonar-large-32k-online", base_url="https://api.perplexity.ai")
+llm=ChatOpenAI(model="llama-3.1-sonar-small-128k-online", base_url="https://api.perplexity.ai")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
