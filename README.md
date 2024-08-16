@@ -1,6 +1,6 @@
 # VedDarpan: An Open-Source Chatbot
 
-VedDarpan is an open-source chatbot designed to provide the latest online results using advanced AI models. Built with Streamlit and Langchain, VedDarpan leverages the power of the Llama-3-Sonar-Large-32k-Chat model and Perplexity integration with OpenAI. The chatbot is available for public use free of cost.
+VedDarpan is an open-source chatbot designed to provide the latest online results using advanced AI models. Built with Streamlit and Langchain, VedDarpan leverages the power of the llama-3.1-sonar-large-128k-chat model and Perplexity integration with OpenAI. The chatbot is available for public use free of cost.
 
 You can try VedDarpan here: [VedDarpan Chatbot](https://veddarpan.streamlit.app/)
 
@@ -8,7 +8,7 @@ You can try VedDarpan here: [VedDarpan Chatbot](https://veddarpan.streamlit.app/
 
 - **Latest Online Results**: Provides up-to-date information by integrating with Perplexity and OpenAI.
 - **User-Friendly Interface**: Built with Streamlit for a simple and intuitive user experience.
-- **Advanced AI Models**: Utilizes the Llama-3-Sonar-Large-32k-Chat model for accurate and relevant responses.
+- **Advanced AI Models**: Utilizes the llama-3.1-sonar-large-128k-chat model for accurate and relevant responses.
 
 ## Getting Started
 
