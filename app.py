@@ -22,6 +22,10 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
+# Initialize conversation history
+if 'conversation_history' not in st.session_state:
+    st.session_state.conversation_history = []
+
 # Streamlit framework
 st.set_page_config(page_title="VedDarpan Chatbot", page_icon="🤖", layout="centered")
 
@@ -40,10 +44,23 @@ with tabs[0]:
     chain = prompt | llm | output_parser
 
     if input_text:
+        st.session_state.conversation_history.append(("user", input_text))
         with st.spinner('Generating response...'):
-            response = chain.invoke({'question': input_text})
+            response = chain.invoke({'question': input_text, 'history': st.session_state.conversation_history})
+            st.session_state.conversation_history.append(("assistant", response))
             st.success("Here's the answer:")
             st.write(response)
+
+        # Follow-up chat loop
+        follow_up_text = st.text_area("💬 Ask a follow-up question:", key="initial_follow_up")
+        while follow_up_text:
+            st.session_state.conversation_history.append(("user", follow_up_text))
+            with st.spinner('Generating follow-up response...'):
+                follow_up_response = chain.invoke({'question': follow_up_text, 'history': st.session_state.conversation_history})
+                st.session_state.conversation_history.append(("assistant", follow_up_response))
+                st.success("Here's the follow-up answer:")
+                st.write(follow_up_response)
+                follow_up_text = st.text_area("💬 Ask another follow-up question:", key=f"follow_up_{follow_up_text}")
 
 with tabs[1]:
     st.header("About VedDarpan 🤖")
