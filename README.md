@@ -1,8 +1,16 @@
-# VedDarpan: An Open-Source Chatbot
+<div align="center">
 
+# VedDarpan
+[![Try VedDarpan](https://img.shields.io/badge/Try-VedDarpan-brightgreen?style=for-the-badge&logo=streamlit)](https://veddarpan.streamlit.app/)
+[![Related Repo: AgroSmart](https://img.shields.io/badge/Related%20Repo-AgroSmart-orange?style=for-the-badge&logo=github)](https://github.com/theshivam7/AgroSmart)
+
+**Open-source Chatbot that provides fast and accurate response.**
+</div>
+
+## Overview
 VedDarpan is an open-source chatbot designed to provide the latest online results using advanced AI models. Built with Streamlit and Langchain, VedDarpan leverages the power of the llama-3.1-sonar-large-128k-chat model and Perplexity integration with OpenAI. The chatbot is available for public use free of cost.
 
-You can try VedDarpan here: [VedDarpan Chatbot](https://veddarpan.streamlit.app/)
+Try VedDarpan here: [VedDarpan Chatbot](https://veddarpan.streamlit.app/)
 
 ## Features
 
@@ -21,25 +29,30 @@ Make sure you have the following installed:
 
 ### Installation
 
-1. Clone the repository:
-
+1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/VedDarpan.git
-    cd VedDarpan
-    ```
+    git clone https://github.com/theshivam7/VedDarpan.git
 
+2. **Navigate to the project directory**:
+    ```bash
+    cd VedDarpan
+
+    ```
 2. Create a virtual environment and activate it:
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
+```bash
+python3 -m venv venv
+```
 
-3. Install the required packages:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
+Activate the virtual environment:
+- On Windows:
+  ```bash
+  venv\Scripts\activate
+  ```
+- On macOS/Linux:
+  ```bash
+  source venv/bin/activate
+  ```
 
 4. Set up environment variables:
 
@@ -63,11 +76,25 @@ streamlit run app.py
 - Powered by [Langchain](https://www.langchain.com/)
 - Uses models from [OpenAI](https://www.openai.com/) and [Perplexity](https://www.perplexity.ai/)
 
-## Author
+## About the Developer
+I'm [**Shivam Sharma**](https://www.linkedin.com/in/theshivam7/), an undergrad at IIT Madras. I develop websites and apps for Android and iOS, and I'm passionate about AI and ML.
 
-Made by [Shivam Sharma](https://www.linkedin.com/in/theshivam7/)
+## Contact Me
 
+If you have any questions, feel free to reach out on LinkedIn or check out my GitHub for interesting projects:
 
-## Contributors
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/theshivam7/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://www.github.com/theshivam7/)
+---
 
-Contributors are welcome to contribute to this chatbot. Please feel free to submit pull requests or open issues.
+## 🤝 Contributors
+
+We welcome contributions! Feel free to submit pull requests or open issues.
+
+---
+
+<div align="center">
+  
+[![Made with ❤️ by Shivam](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20by-Shivam-red?style=for-the-badge)](https://github.com/theshivam7)
+
+</div>
