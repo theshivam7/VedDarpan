@@ -38,13 +38,13 @@ Make sure you have the following installed:
     cd VedDarpan
 
     ```
-2. Create a virtual environment and activate it:
+3. Create a virtual environment and activate it:
 
 ```bash
 python3 -m venv venv
 ```
 
-Activate the virtual environment:
+4. Activate the virtual environment:
 - On Windows:
   ```bash
   venv\Scripts\activate
@@ -53,19 +53,22 @@ Activate the virtual environment:
   ```bash
   source venv/bin/activate
   ```
+5: Install the Required Dependencies
 
-4. Set up environment variables:
+Install the dependencies listed in the `requirements.txt` file:
 
-    Create a `.env` file in the project directory and add your OpenAI API key and Langchain API key:
+```bash
+pip install -r requirements.txt
+```
+
+6. **Create a `.env` file** in the root of your project and add your API key for the translation service.
 
     ```env
     OPENAI_API_KEY=your_openai_api_key
     LANGCHAIN_API_KEY=your_langchain_api_key
     ```
 
-### Running the App
-
-To start the Streamlit app, run:
+7. To start the Streamlit app, run:
 
 ```bash
 streamlit run app.py 
