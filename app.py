@@ -77,7 +77,8 @@ with tabs[0]:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    # Create a placeholder for the response
+    # Create a placeholder for prompt and response
+    prompt_placeholder = st.empty()
     response_placeholder = st.empty()
 
     # Add the small text above the chatbox
@@ -90,7 +91,7 @@ with tabs[0]:
         # Add user message to chat history
         st.session_state['messages'].append({"role": "user", "content": prompt})
         # Display user message in chat message container
-        with st.chat_message("user"):
+        with prompt_placeholder.chat_message("user"):
             st.markdown(prompt)
 
         # Generate response
