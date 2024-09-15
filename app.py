@@ -40,8 +40,7 @@ with tabs[0]:
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        color: white;
+        color: var(--text-color);
         text-align: center;
         padding: 10px 0;
         z-index: 999;
@@ -117,6 +116,18 @@ with tabs[2]:
 # Footer
 st.markdown(
     """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: var(--text-color);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+    </style>
     <div class="footer">Made with ❤️ by Shivam 🍁</div>
     """,
     unsafe_allow_html=True
